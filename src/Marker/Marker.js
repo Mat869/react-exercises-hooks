@@ -18,7 +18,6 @@ function Marker () {
 
 	var Highlight = require('react-highlighter');
 
-
 	return (
 		<div className="Marker">
 			<p>

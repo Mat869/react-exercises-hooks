@@ -8,6 +8,7 @@ function AddTaskForm(props) {
         e.preventDefault();
         let task = myInput.current.value;
         props.onAdd(task);
+        e.target.reset();
     }
 
 	return (
