@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React, { useState, useRef } from 'react';
 import './ColorName.scss';
 
-class ColorName extends Component {
+function ColorName() {
 
-	render() {
+		const [color, setColor] = useState('');
+
+		const myInput = useRef();
+
 		return (
 			<div className="ColorName">
 				<p>
@@ -12,10 +15,10 @@ class ColorName extends Component {
 					Examples: <span className="color--red">red</span> <span className="color--blue">blue</span>
 				</p>
 
-				{ /* Insert your new component here */ }
+				{ <input ref={myInput} onChange={() => setColor(myInput.current.value)}></input> }
+				<p style={{color: `${color}`}}>{color}</p>
 			</div>
 		)
-	}
 }
 
 export default ColorName;
